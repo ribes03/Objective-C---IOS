@@ -1,0 +1,39 @@
+Version 1.1.0 - February 2013
+=============================
+Features:
+  ! The points of a GMSPolyline (and GMSPolylineOptions) are now specified as
+    a GMSPath and built via a GMSMutablePath, rather than addVertex: etc
+  - GMSPolyline may now be specified as geodesic
+  - animateToCameraPosition: method on GMSMapView
+  - GMSProjection provides containsCoordinate: and visibleRegion helpers
+
+Bugfixes:
+  - GMSCameraPosition and animateToLocation: now clamp/wrap latitude/longitude
+    respectively; similarly, bearing is clamped to 0 <= bearing < 360
+  - GMSGroundOverlay may be modified after creation
+  - The points of a GMSPoyline may be modified after creation
+  - GMSPolyline may cross the antimeridian
+  - Resolved a marker sorting issue
+
+Version 1.0.2 - January 2013
+============================
+Features:
+  ! GMSCamera (struct) has been dropped in favour of GMSCameraPosition * (objc
+    class), supports finer control of bearing and viewing angle
+  - Added GMSUISettings to control gesture availability
+  - Added GMSGroundOverlay/GMSGroundOverlayOptions for basic ground overlay
+    support
+  - Removed requirement to call startRendering/stopRendering
+  - Support for adding GMSMapView as a custom UIView in Interface Builder
+  - Improved texture memory handling
+
+Bugfixes:
+  - Info windows now have highest tap priority
+  - Selected markers are automatically brought to front
+  - Polylines now render at constant size regardless of the zoom level
+
+Version 1.0.1 - December 2012
+=============================
+Initial release alongside Google Maps for iOS.
+Support for 3D maps, rotation, tilt, 3D buildings, markers, polylines,
+satellite and terrain tiles, traffic data, and other features.
